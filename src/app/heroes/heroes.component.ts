@@ -18,11 +18,6 @@ export class HeroesComponent implements OnInit {
 
     constructor(private heroService: HeroService, private messageService: MessageService) {}
 
-    selectedHero?: Hero;
-    onSelect(hero: Hero): void {
-        this.selectedHero = hero
-        this.messageService.add(`HeroesComponent: selected hero id=${hero.id}`)
-    }
 
     getHeroes(): void {
         this.heroService.getHeroes()
